@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thành công</title>
+  </head>
+  <body>
+    <h1>Thành công</h1>
+    <p>Đã lưu Thú cưng thành công!</p>
+    <p th:object="${savedPet}"></p>
+    <ul>
+      <li><strong>Tên:</strong> <span th:text="${savedPet.petName}"></span></li>
+      <li><strong>Tuổi:</strong> <span th:text="${savedPet.age}"></span></li>
+      <li><strong>Mã:</strong> <span th:text="${savedPet.petCode}"></span></li>
+    </ul>
+    <p><a th:href="@{/pet/add}">Thêm thú cưng khác</a></p>
+  </body>
+</html>
